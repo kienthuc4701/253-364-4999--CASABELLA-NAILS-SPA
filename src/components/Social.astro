@@ -1,0 +1,8 @@
+---
+   type Props = {
+      size?:number | string,
+      svg:string;
+   }
+   const {svg} = Astro.props;
+---
+   <a inline-block w-10 h-10 rounded-full bg-white><i set:html={svg}/></a>
