@@ -1,6 +1,5 @@
 import {
   defineConfig,
-  presetMini,
   presetWebFonts ,
   presetUno,
   presetAttributify,
@@ -11,6 +10,7 @@ import presetRemToPx from "@unocss/preset-rem-to-px";
 
 export default defineConfig({
   shortcuts: [
+    {"title-section":"text-3xl font-eb text-primary font-semibold text-center uppercase italic"},
     [/^text-truncate-(.*)$/, ([, c]) => `line-clamp-${c} break-keep`],
     {"wrapper": "max-w-[1140px] mx-auto"}
   ],
@@ -18,15 +18,16 @@ export default defineConfig({
   presets: [
     presetRemToPx(),
     presetUno(),
+    presetAttributify(),
     presetWebFonts(
      {
        provider: 'google', // default provider
        fonts: {
          sans: 'Montserrat',
+         eb: 'EB Garamond'
        }
      }
     ),
-    presetAttributify(),
   ],
   theme: {
     container: {
@@ -35,6 +36,7 @@ export default defineConfig({
     colors: {
       primary: "#003511",
       secondary: "#4C9A29",
+      third:"#ACDF87"
     },
   },
 });

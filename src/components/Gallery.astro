@@ -1,0 +1,10 @@
+---
+import 'swiper/swiper-bundle.css';
+import GallerySlider from '@/components/react/GallerySlider'
+import { Image } from 'astro:assets';
+---
+<section class="pt-20 pb-38 relative overflow-hidden">
+   <Image class="absolute inset-0 -z-5" src="/bg-gallery.png" alt="bg-gallery" width="1540" height="400"/>
+   <h3 title-section>Gallery</h3>
+   <GallerySlider client:visible/>
+</section>

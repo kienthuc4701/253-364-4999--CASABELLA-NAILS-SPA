@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+---
+<section relative right-16 pt-3>
+   <div class="wrapper flex items-start justify-center gap-x-35">
+      <div border-10 border-secondary w-fit flex-shrink-0 justify-self-end>
+         <Image src="/banner.jpg" width={400} height={400} alt="Banner"/>
+      </div>
+      <div border-10 border-secondary bg-white text-center p-3>
+         <h2 text-5xl text-primary  uppercase font-eb>casabella 
+         <h4 text-2xl text-primary uppercase font-eb>Nails & spa</h4>
+         </h2>
+         <p text-sm my-5 max-w-75>Where luxury meets relaxation, and elegance meets self-care. Our mission is to provide exceptional nail services and spa treatments that cater to your needs while ensuring a comfortable and rejuvenating experience.</p>
+         <button bg-primary text-white px-5 py-1.5 capitalize>Book now</button>
+      </div>
+   </div>
+   <div absolute inset-0 -z-10 overflow-hidden bottom-10>
+     <video w-full src="/bg-banner.mp4" muted="muted" autoplay="true"/>
+   <div>
+</section>
+<script>
+   const bannerVideo = document.querySelector("video");
+   if(bannerVideo instanceof HTMLElement) {
+        bannerVideo.onended=()=>{
+         bannerVideo.play();
+        }
+   }
+</script>

@@ -1,8 +1,9 @@
 ---
    type Props = {
+      link:string,
       size?:number | string,
       svg:string;
    }
-   const {svg} = Astro.props;
+   const {svg, link} = Astro.props;
 ---
-   <a inline-block w-10 h-10 rounded-full bg-white><i set:html={svg}/></a>
+   <a href={link} target='_blank' inline-flex items-center justify-center w-10 h-10 rounded-full bg-white><i set:html={svg}/></a>
