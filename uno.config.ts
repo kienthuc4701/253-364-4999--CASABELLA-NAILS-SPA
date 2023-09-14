@@ -19,6 +19,7 @@ export default defineConfig({
     {"header-fixed":"fixed top-0 left-0 right-0 z-10 bg-cover bg-[url('/bg-header.webp')] transition-all ease-out duration-300"},
     {"flex-service-item":"flex flex-col items-center gap-5 mb-3 md:flex-row"},
     {"bg-body":"bg-[url('/bg-body.png')] to-blue-200/[0.2]"},
+    {"bg-gallery":"bg-[url('/bg-gallery.png')]"},
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   presets: [
