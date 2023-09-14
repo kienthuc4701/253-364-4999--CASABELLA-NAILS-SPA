@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 
 ---
-<section relative right-16 pt-3>
-   <div class="wrapper flex items-start justify-center gap-x-35">
+<section md:relative right-16 pt-3>
+   <div class="wrapper flex flex-col-reverse justify-center gap-y-10 md:(flex-row items-start gap-x-35)">
       <div border-10 border-secondary w-fit flex-shrink-0 justify-self-end>
          <Image src="/banner.jpg" width={400} height={400} alt="Banner"/>
       </div>

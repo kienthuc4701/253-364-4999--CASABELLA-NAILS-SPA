@@ -27,19 +27,21 @@ const socials = [
 ]
 ---
 
-<header class="relative">
+<section class="relative">
    <video absolute -z-10 w-full autoplay="true" muted="muted" src="/bg-header.mp4"/>
-   <div class="wrapper flex justify-between items-center">
-      <ul class="flex items-center gap-x-[5px]">
-         {socials.map((social)=><Social link={social.link} svg={social.svg}/>)}
-      </ul>
-      <a href="/">
-         <Image src="/logo.png" alt="Logo" width=120 height=213 />
-      </a>
-      <button text-white>Book Now</button>
-   </div>
+   <header class="header">
+      <div class="flex wrapper py-1 justify-between items-center">
+         <ul class="hidden md:flex items-center gap-x-[5px]">
+            {socials.map((social)=><Social link={social.link} svg={social.svg}/>)}
+         </ul>
+         <a href="/">
+            <Image src="/logo.png" alt="Logo" width=120 height=213 />
+         </a>
+         <button text-white>Book Now</button>
+      </div>
+   </header>
    <!-- <Banner/> -->
-</header>
+</section>
 <script>
    const headerVideo = document.querySelector("video");
    if(headerVideo instanceof HTMLElement) {
@@ -47,4 +49,19 @@ const socials = [
          headerVideo.play();
         }
    }
+   // fixed header
+   const header = document.querySelector("header");
+   window.onscroll=(e)=>{
+      if(header) {
+      if(window.scrollY > header?.offsetHeight) {
+           header.classList.remove("header");
+            header.classList.add("header-fixed");
+      }
+      else {
+         header.classList.remove("header-fixed");
+         header.classList.add("header");
+      }
+    }
+   }
+   
 </script>

@@ -2,11 +2,11 @@
 import { Image } from "astro:assets";
 ---
 <section mt-10>
-     <div flex justify-end bg-third bottom-10 pt-10>
-      <div class="bg-[#1E2631D6] p-5 translate-y-5">
-         <h3 uppercase font-eb text-third text-3xl font-semibold italic pt-8>About us</h3>
-         <p text-white text-sm pt-3 max-w-100>CASABELLA NAILS & SPA is committed to delivering the highest level of customer satisfaction through the use of premium products and state-of-the-art tools. Our team of skilled professionals is dedicated to creating stunning, long-lasting nails and providing rejuvenating spa treatments that align with your personal preferences. We prioritize the well-being of our clients, and take pride in our ability to elevate their spirits and enhance their natural beauty. CASABELLA NAILS & SPA is the ideal destination for those who value self-care and seek to indulge in a truly luxurious experience.</p>
+     <div md:(flex justify-end bottom-10) pt-10 bg-third relative overflow-hidden>
+      <div class="absolute bg-black/[.75] z-5 text-center top-15 pt-3 bottom-0 px-5 md:(translate-y-15 -translate-x-125 pt-5 px-8 top-0 w-2/7)">
+         <h3 uppercase font-eb text-third text-3xl font-semibold italic>About us</h3>
+         <p text-white text-sm pt-3>CASABELLA NAILS & SPA is committed to delivering the highest level of customer satisfaction through the use of premium products and state-of-the-art tools. Our team of skilled professionals is dedicated to creating stunning, long-lasting nails and providing rejuvenating spa treatments that align with your personal preferences. We prioritize the well-being of our clients, and take pride in our ability to elevate their spirits and enhance their natural beauty. CASABELLA NAILS & SPA is the ideal destination for those who value self-care and seek to indulge in a truly luxurious experience.</p>
       </div>
-      <Image class="flex-shrink-0 translate-y-5" src="/about-us.png" width={500} height={500} alt="about us"/>
+      <Image class="md:block flex-shrink-0 translate-y-5 h-90" src="/about-us.png" width={500} height={500} alt="about us"/>
      </div>
 </section>

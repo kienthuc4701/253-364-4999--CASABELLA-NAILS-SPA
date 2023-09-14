@@ -4,11 +4,9 @@ import TetsimonialSlider from "./react/TestimonialSlider";
 ---
 
 <section>
-   <div>
-   <div flex items-end justify-center gap-x-10 p-10>
-      <h3 class="w-1/2" text-end title-section>Testimonial</h3>
+   <div class="md:(flex-row items-end p-10) flex flex-col justify-center gap-10">
+      <h3 class="md:(w-1/2 text-end) text-center title-section">Testimonial</h3>
       <Image class="rounded-md shadow-xl" src="/testimonial.png" alt="testimonial" width={713} height={400}/>
    </div>
    <TetsimonialSlider client:visible/>
-   </div>
 </section>

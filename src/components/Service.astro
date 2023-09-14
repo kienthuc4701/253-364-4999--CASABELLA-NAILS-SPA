@@ -4,26 +4,116 @@ import { Image } from 'astro:assets';
 
 <section class="bg-[url('/bg-service.png')] mt-20">
    <h3 title-section>Services</h3>
- 
+   <!-- Nail Enhancements -->
+   <div>
+      <h5 service-name>Nail Enhancements</h5>
+   <div class="wrapper section-style">
+      <div flex flex-col items-center gap-x-10 md:(flex-row items-start) >
+         <!-- left -->
+            <div  class="md:(flex-shrink-0 w-1/2)">
+               <h3 uppercase text-secondary font-semibold italic my-5 text-center>Acrylic</h3>
+               <!-- box -->
+               <div w-full border-2 border-black text-sm mb-5>
+                  <!-- thead -->
+                  <div grid grid-cols-4 gap-x-12 font-semibold bg-primary>
+                     <div col-start-3 text-white py-1>Full Set</div>
+                     <div  text-white py-1>Fill In</div>
+                  </div>
+                  <!-- 1 -->
+                  <div grid grid-cols-4 gap-x-12 font-semibold bg-zinc-200>
+                     <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$50</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$40</span></div>
+                  </div>
+                  <!-- 2 -->
+                  <div grid grid-cols-4 gap-x-12 font-semibold>
+                     <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$50</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$40</span></div>
+                  </div>
+                  <!-- 3 -->
+                  <div grid grid-cols-4 gap-x-12 font-semibold bg-zinc-200>
+                     <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$50</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$40</span></div>
+                  </div>
+                  <!-- 4 -->
+                  <div grid grid-cols-4 gap-x-12 font-semibold>
+                     <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$50</span></div>
+                     <div text-white py-1 text-start><span text-gray-900>$40</span></div>
+                  </div>
+            </div>
+            <Image src="/sns.jpeg" width={600} height={200} alt="SNS"/>
+            </div>
+            <!-- right -->
+            <div text-sm font-medium>
+               <h3 uppercase text-secondary font-semibold italic my-5 text-center>SNS Dipping</h3>
+               <!-- box -->
+               <p text-sm>Our high-end Dipping Powder not only produces exceptional beauty but also results in healthy nails. The product is unique in multiple ways:</p>
+               <ul>
+                  <li>Natural looking </li>
+                  <li>No damage to nail bed</li>
+                  <li>Lightweight & flexible</li>
+                  <li>Non-toxic & odor-free</li>
+                  <li>Strong & durable<li>
+                  <li>Crack & chip-resistant</li>
+                  <li>Calcium & vitamin E fortified</li>
+               </ul>
+               <!--  -->
+               <ul my-5 flex flex-col gap-y-2>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">SNS Dip Color with Tip</span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$50/ $60</span>
+                  </li>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">SNS Dip French With Tip
+                     </span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$60/ $70</span>
+                  </li>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">SNS Ombre With Tip</span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$65/ $75</span>
+                  </li>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">Gel X</span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$60+</span>
+                  </li>
+                  <p text-sm>Gel-X nails are flexible, lightweight, and natural-looking, especially when compared to acrylics. NO liquid smell. QUICK to apply. Additionally, they are extremely easy to shape.</p>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">T.A.P Gel</span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$60+</span>
+                  </li>
+                  <p text-sm>T.A.P Gel is a complete Nail Enhancement System that builds strength and foundation for anyone looking for more lightweight and natural-looking nails.</p>
+               </ul>
+            </div>
+      </div>
+   </div>
+   </div>
    <!-- Manicure -->
-   <div class="wrapper" mb-16>
-      <h5 text-center mt-2 text-secondary font-semibold>Manicure</h5>
+   <div class="wrapper" section-style>
+      <h5 service-name>Manicure</h5>
       <!-- 1 -->
-      <div flex items-center gap-x-5 mb-3>
-            <Image src="/manicure-01.jpg" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+            <Image src="/manicure-01.jpg" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">BASIC MANICURE</span>
                <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$30</span>
+               <span class="ml-auto">$30</span>
             </div>
             <p text-sm>The Basic Manicure comes with nail trimming and shaping, cuticle grooming, hot towel wrap, lotion massage, and the application of polish.</p>
          </div>
       </div>
       <!-- 2 -->
-      <div flex items-center gap-x-5 mb-3>
-         <Image src="/manicure-02.jpg" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+         <Image src="/manicure-02.jpg" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">PARAFFIN MANICURE</span>
                <div class="flex-1" h-1 border-b-1/>
@@ -35,9 +125,9 @@ import { Image } from 'astro:assets';
          </div>
       </div>
           <!-- 3 -->
-      <div flex items-center gap-x-5 mb-3>
-         <Image src="/manicure-03.jpeg" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+         <Image src="/manicure-03.jpeg" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">SPA MANICURE</span>
                <div class="flex-1" h-1 border-b-1/>
@@ -49,9 +139,9 @@ import { Image } from 'astro:assets';
          </div>
       </div>
          <!-- 4 -->
-      <div flex items-center gap-x-5 mb-3>
-         <Image src="/manicure-04.jpeg" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+         <Image src="/manicure-04.jpeg" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">GEL MANICURE COLOR/ FRENCH</span>
                <div class="flex-1" h-1 border-b-1/>
@@ -64,12 +154,12 @@ import { Image } from 'astro:assets';
       </div>
    </div>
      <!-- Spa Pedicure -->
-   <div class="wrapper">
-      <h5 text-center mt-2 text-secondary font-semibold>Spa Pedicure</h5>
+   <div class="wrapper" section-style>
+      <h5 service-name>Spa Pedicure</h5>
       <!-- 1 -->
-      <div flex items-center gap-x-5 mb-3>
-            <Image src="/pedi-01.png" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+            <Image src="/pedi-01.png" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">BASIC PEDICURE</span>
                <div class="flex-1" h-1 border-b-1/>
@@ -81,9 +171,9 @@ import { Image } from 'astro:assets';
          </div>
       </div>
       <!-- 2 -->
-      <div flex items-center gap-x-5 mb-3>
-         <Image src="/pedi-02.jpeg" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+         <Image src="/pedi-02.jpeg" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">BELLA PEDICURE</span>
                <div class="flex-1" h-1 border-b-1/>
@@ -95,9 +185,9 @@ import { Image } from 'astro:assets';
          </div>
       </div>
           <!-- 3 -->
-      <div flex items-center gap-x-5 mb-3>
-         <Image src="/pedi-03.png" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+         <Image src="/pedi-03.png" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">VOLCANO SPA PEDICURE</span>
                <div class="flex-1" h-1 border-b-1/>
@@ -109,9 +199,9 @@ import { Image } from 'astro:assets';
          </div>
       </div>
          <!-- 4 -->
-      <div flex items-center gap-x-5 mb-3>
-         <Image src="/pedi-04.png" alt="img1" width={100} height={100} class="rounded-full"/>
-         <div>
+      <div flex-service-item>
+         <Image src="/pedi-04.png" alt="" width={100} height={100} class="rounded-full"/>
+         <div flex-1>
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">COLLAGEN SPA PEDICURE</span>
                <div class="flex-1" h-1 border-b-1/>
@@ -123,9 +213,9 @@ import { Image } from 'astro:assets';
          </div>
       </div>
       <!-- 5 -->
-      <div flex items-center gap-x-5 mb-3>
-      <Image src="/pedi-05.jpeg" alt="img1" width={100} height={100} class="rounded-full"/>
-      <div>
+      <div flex-service-item>
+      <Image src="/pedi-05.jpeg" alt="" width={100} height={100} class="rounded-full"/>
+      <div flex-1>
          <div flex justify-between items-center gap-x-1 font-semibold text-primary>
             <span class="w-fit">CASABELLA SPA PEDICURE</span>
             <div class="flex-1" h-1 border-b-1/>
@@ -137,9 +227,9 @@ import { Image } from 'astro:assets';
       </div>
       </div>
           <!-- 5 -->
-          <div flex items-center gap-x-5 mb-3>
-            <Image src="/pedi-05.jpeg" alt="img1" width={100} height={100} class="rounded-full"/>
-            <div>
+          <div flex-service-item>
+            <Image src="/pedi-05.jpeg" alt="" width={100} height={100} class="rounded-full"/>
+            <div flex-1>
                <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                   <span class="w-fit">DREAM DAY PEDICURE *MUST TRY*</span>
                   <div class="flex-1" h-1 border-b-1/>
@@ -152,11 +242,11 @@ import { Image } from 'astro:assets';
             </div>
    </div>
    <!-- Gel Pedicure -->
-   <div class="wrapper" mb-16>
-      <h5 text-center mt-2 text-secondary font-semibold>Gel Pedicure</h5>
+   <div class="wrapper" section-style>
+      <h5 service-name>Gel Pedicure</h5>
       <p text-center>Beautiful colors that enhance and last, gel polish is an easy-to-remove polish with long-lasting technology.</p>
-      <div flex justify-center gap-x-10 my-10>
-         <div class="w-1/2" flex flex-col gap-3>
+      <div md:flex-service-item>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span>BASIC GEL PEDICURE</span>
                <div flex-1 h-1 border-b-1/>
@@ -175,7 +265,7 @@ import { Image } from 'astro:assets';
                <span class="w-fit">$75</span>
             </div>
          </div>
-         <div class="w-1/2" flex flex-col gap-3>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">GEL WITH COLLAGEN SPA PEDICURE
                </span>
@@ -197,193 +287,14 @@ import { Image } from 'astro:assets';
          </div>
       </div>
    </div>
-     <!-- Nail Enhancements -->
-   <div>
-         <h5 text-center mt-2 text-secondary font-semibold>Nail Enhancements</h5>
-      <div class="wrapper">
-         <div flex gap-x-10 justify-between>
-            <!-- left -->
-               <div flex-shrink-0 class="w-1/2">
-                  <h3 uppercase text-secondary font-semibold italic my-5 text-center>Acrylic</h3>
-                  <!-- box -->
-                  <div border-2 border-black text-sm mb-5>
-                     <!-- thead -->
-                     <div grid grid-cols-4 gap-x-12 font-semibold bg-primary>
-                        <div col-start-3 text-white py-1>Full Set</div>
-                        <div  text-white py-1>Fill In</div>
-                     </div>
-                     <!-- 1 -->
-                     <div grid grid-cols-4 gap-x-12 font-semibold bg-zinc-200>
-                        <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$50</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$40</span></div>
-                     </div>
-                     <!-- 2 -->
-                     <div grid grid-cols-4 gap-x-12 font-semibold>
-                        <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$50</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$40</span></div>
-                     </div>
-                     <!-- 3 -->
-                     <div grid grid-cols-4 gap-x-12 font-semibold bg-zinc-200>
-                        <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$50</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$40</span></div>
-                     </div>
-                     <!-- 4 -->
-                     <div grid grid-cols-4 gap-x-12 font-semibold>
-                        <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>Acrylic With Gel Color</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$50</span></div>
-                        <div text-white py-1 text-start><span text-gray-900>$40</span></div>
-                     </div>
-               </div>
-               <Image src="/sns.jpeg" width={600} height={200} alt="SNS"/>
-               </div>
-               <!-- right -->
-               <div text-sm font-medium>
-                  <h3 uppercase text-secondary font-semibold italic my-5 text-center>SNS Dipping</h3>
-                  <!-- box -->
-                  <p text-sm>Our high-end Dipping Powder not only produces exceptional beauty but also results in healthy nails. The product is unique in multiple ways:</p>
-                  <ul>
-                     <li>Natural looking </li>
-                     <li>No damage to nail bed</li>
-                     <li>Lightweight & flexible</li>
-                     <li>Non-toxic & odor-free</li>
-                     <li>Strong & durable<li>
-                     <li>Crack & chip-resistant</li>
-                     <li>Calcium & vitamin E fortified</li>
-                  </ul>
-                  <!--  -->
-                  <ul my-5 flex flex-col gap-y-2>
-                     <li flex justify-between items-center gap-x-1 font-semibold text-primary>
-                        <span class="w-fit">SNS Dip Color with Tip</span>
-                        <div class="flex-1" h-1 border-b-1/>
-                        <span class="w-fit">$50/ $60</span>
-                     </li>
-                     <li flex justify-between items-center gap-x-1 font-semibold text-primary>
-                        <span class="w-fit">SNS Dip French With Tip
-                        </span>
-                        <div class="flex-1" h-1 border-b-1/>
-                        <span class="w-fit">$60/ $70</span>
-                     </li>
-                     <li flex justify-between items-center gap-x-1 font-semibold text-primary>
-                        <span class="w-fit">SNS Ombre With Tip</span>
-                        <div class="flex-1" h-1 border-b-1/>
-                        <span class="w-fit">$65/ $75</span>
-                     </li>
-                     <li flex justify-between items-center gap-x-1 font-semibold text-primary>
-                        <span class="w-fit">Gel X</span>
-                        <div class="flex-1" h-1 border-b-1/>
-                        <span class="w-fit">$60+</span>
-                     </li>
-                     <p text-sm>Gel-X nails are flexible, lightweight, and natural-looking, especially when compared to acrylics. NO liquid smell. QUICK to apply. Additionally, they are extremely easy to shape.</p>
-                     <li flex justify-between items-center gap-x-1 font-semibold text-primary>
-                        <span class="w-fit">T.A.P Gel</span>
-                        <div class="flex-1" h-1 border-b-1/>
-                        <span class="w-fit">$60+</span>
-                     </li>
-                     <p text-sm>T.A.P Gel is a complete Nail Enhancement System that builds strength and foundation for anyone looking for more lightweight and natural-looking nails.</p>
-                  </ul>
-               </div>
-         </div>
-      </div>
-   </div>
-   <!-- Additional Services -->
-   <div class="wrapper" mb-16>
-      <h5 text-center mt-2 text-secondary font-semibold>Additional Services</h5>
-      <div flex justify-center gap-x-10 my-10>
-         <div class="w-1/2" flex flex-col gap-3>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span>Polish Change On Hands/Feet
-               </span>
-               <div flex-1 h-1 border-b-1/>
-               <span>$15/ $20
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">French Polish Change On Hands/Feet
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$25/ $30
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Gel Color Change On Hands/Feet
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$25/ $30
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Gel French Change On Hands/Feet
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$35/ $40
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">French Tips (With Service)
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$10
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Stiletto/ Coffin Tips For Long Nails (With Service)
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$5+
-               </span>
-            </div>
-         </div>
-         <div class="w-1/2" flex flex-col gap-3>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Nail Design
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$10+
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Nail Repair
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$5+
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Acrylic Removal
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$15
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Acrylic Removal With Manicure/Gel Manicure
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$35/$45
-               </span>
-            </div>
-            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
-               <span class="w-fit">Paraffin Treatment On Hands/ Feet
-               </span>
-               <div class="flex-1" h-1 border-b-1/>
-               <span class="w-fit">$10/$10
-               </span>
-            </div>
-         
-         </div>
-      </div>
-   </div>
-     <!-- Kid's Service -->
-   <div class="wrapper" mb-16>
-      <h5 text-center mt-2 text-secondary font-semibold>Kid's Service</h5>
+      <!-- Kid's Service -->
+   <div class="wrapper" section-style>
+      <h5 service-name>Kid's Service</h5>
       <p text-center>
          (For children who are under 10 years of age)
       </p>
-      <div flex justify-center gap-x-10 my-10>
-         <div class="w-1/2" flex flex-col gap-3>
+      <div md:flex-service-item>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span>Manicure Color/ French
                </span>
@@ -401,7 +312,7 @@ import { Image } from 'astro:assets';
                <span class="w-fit">$30</span>
             </div>
          </div>
-         <div class="w-1/2" flex flex-col gap-3>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span class="w-fit">Gel Manicure
                </span>
@@ -417,12 +328,12 @@ import { Image } from 'astro:assets';
          </div>
       </div>
    </div>
-     <!-- Waxing -->
-   <div class="wrapper" mb-16>
-      <h5 text-center mt-2 text-secondary font-semibold>Waxing
+   <!-- Waxing -->
+   <div class="wrapper" section-style>
+      <h5 service-name>Waxing
       </h5>
-      <div flex justify-center gap-x-10 my-10>
-         <div class="w-1/2" flex flex-col gap-3>
+      <div md:flex-service-item>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span>Eyebrows</span>
                <div flex-1 h-1 border-b-1/>
@@ -467,7 +378,7 @@ import { Image } from 'astro:assets';
                <span class="w-fit">$20</span>
             </div>
          </div>
-         <div class="w-1/2" flex flex-col gap-3>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
             <div flex justify-between items-center gap-x-1 font-semibold text-primary>
                <span>Half Arms
                </span>
@@ -517,5 +428,92 @@ import { Image } from 'astro:assets';
          </div>
       </div>
    </div>
-
+   <!-- Additional Services -->
+   <div class="wrapper" section-style>
+      <h5 service-name>Additional Services</h5>
+      <div md:flex-service-item>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span>Polish Change On Hands/Feet
+               </span>
+               <div flex-1 h-1 border-b-1/>
+               <span>$15/ $20
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">French Polish Change On Hands/Feet
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$25/ $30
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Gel Color Change On Hands/Feet
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$25/ $30
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Gel French Change On Hands/Feet
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$35/ $40
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">French Tips (With Service)
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$10
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Stiletto/ Coffin Tips For Long Nails (With Service)
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$5+
+               </span>
+            </div>
+         </div>
+         <div class="flex flex-col gap-3 my-3 md:(w-1/2)">
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Nail Design
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$10+
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Nail Repair
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$5+
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Acrylic Removal
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$15
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Acrylic Removal With Manicure/Gel Manicure
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$35/$45
+               </span>
+            </div>
+            <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+               <span class="w-fit">Paraffin Treatment On Hands/ Feet
+               </span>
+               <div class="flex-1" h-1 border-b-1/>
+               <span class="w-fit">$10/$10
+               </span>
+            </div>
+         
+         </div>
+      </div>
+   </div>
 </section>
