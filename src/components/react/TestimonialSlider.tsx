@@ -11,7 +11,7 @@ export default function TetsimonialSlider() {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            return `<span class="${className}"></span>`;
+            return `<span class="${className}" style="width:8px; height:8px"></span>`;
           },
          }}
          breakpoints={{

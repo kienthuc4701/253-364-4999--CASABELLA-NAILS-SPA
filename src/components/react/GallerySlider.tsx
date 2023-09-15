@@ -100,7 +100,7 @@ const GallerySlider = () => {
           dynamicBullets:true,
           dynamicMainBullets: 3,
           renderBullet: function (index, className) {
-            return `<span class="${className}"></span>`;
+            return `<span class="${className}" style="width:8px; height:8px"></span>`;
           },
           }}
         navigation= {{
