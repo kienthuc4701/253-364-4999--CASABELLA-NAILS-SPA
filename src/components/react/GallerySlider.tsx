@@ -97,6 +97,7 @@ const GallerySlider = () => {
           className='relative'
           pagination={{
           clickable: true,
+          dynamicBullets:true,
           dynamicMainBullets: 3,
           renderBullet: function (index, className) {
             return `<span class="${className}"></span>`;
