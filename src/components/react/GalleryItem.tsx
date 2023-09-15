@@ -8,5 +8,4 @@ const GalleryItem = ({src}:Props) => {
    </div>
   )
 }
-
 export default GalleryItem
