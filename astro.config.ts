@@ -8,7 +8,6 @@ export default defineConfig({
   vite: {
     plugins: [unocss()]
   },
-  output: 'server',
   integrations: [react({
     experimentalReactChildren: true
   })]
