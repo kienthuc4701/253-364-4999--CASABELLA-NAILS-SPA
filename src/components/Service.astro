@@ -6,9 +6,19 @@ import GelPedicure from './GelPedicure.astro';
 import KidService from './KidService.astro';
 import Waxing from './Waxing.astro';
 import Additional from './Additional.astro';
+// import Navigation from '@/components/react/Navigation';
 ---
 
 <section  section-style class="bg-[url('/bg-service.png')]">
+   <!-- <Navigation/> -->
+   <div class="wrapper">
+      <div class="flex items-center justify-between">
+         <a href="#manicure" class="bg-third/[0.5] px-6 py-2 rounded hover:bg-third">Manicure</a>
+         <a href="#pedicure" class="bg-third/[0.5] px-6 py-2 rounded hover:bg-third">Pedicure</a>
+         <a href="#additional" class="bg-third/[0.5] px-6 py-2 rounded hover:bg-third">Additional</a>
+         <a href="#waxing" class="bg-third/[0.5] px-6 py-2 rounded hover:bg-third">Waxing</a>
+      </div>
+   </div>
    <h3 title-section>Services</h3>
    <!-- position 1 -->
    <NailEnhancements/>

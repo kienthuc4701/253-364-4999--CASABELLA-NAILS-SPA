@@ -8,7 +8,7 @@ const { data:items } = await supabase
 .from('service').select("*").eq("parent_id", service?.id || "");
 
 ---
-<div class="wrapper" section-style>
+<div class="wrapper" section-style id="manicure">
    <h5 service-name>{service?.name}</h5>
    <!-- 1 -->
   {items?.map(item=> (

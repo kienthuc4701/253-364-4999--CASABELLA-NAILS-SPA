@@ -19,7 +19,7 @@ const { data:service } = await supabase
    .from('service').select("*").eq("parent_id", sns?.id || "");
 
 ---
-   <div class="wrapper">
+   <div class="wrapper" id="nail">
             <h5 class="service-name">{service?.name}</h5>
          <div class="flex flex-col items-center gap-x-10 md:(flex-row items-start)">
             <!-- acrylic -->
