@@ -10,14 +10,14 @@ import presetRemToPx from "@unocss/preset-rem-to-px";
 
 export default defineConfig({
   shortcuts: [
-    {"section-style":"mb-5 md:mb-10"},
+    {"section-style":"mb-5 md:(mt-30 mb-10)"},
     {"title-section":"text-4xl font-eb text-primary font-semibold text-center uppercase italic"},
     {"service-name":"text-2xl text-center mt-2 text-secondary font-semibold my-5"},
     [/^text-truncate-(.*)$/, ([, c]) => `line-clamp-${c} break-keep`],
     {"wrapper": "max-w-[1140px] mx-auto px-8 py-5 md:px-5"},
     {"header":"bg-cover bg-[url('/bg-header.webp')] lg:bg-none transition-all ease-out duration-300"},
     {"header-fixed":"fixed top-0 left-0 right-0 z-10 bg-cover bg-[url('/bg-header.webp')] transition-all ease-out duration-300"},
-    {"flex-service-item":"flex flex-col items-center gap-5 mb-3 md:(flex-row items-stretch)"},
+    {"flex-service-item":"flex flex-col items-center gap-5 mb-3 md:(flex-row)"},
     {"flex-service-item-stretch":"flex flex-col items-stretch gap-5 mb-3 md:(flex-row items-stretch)"},
     {"bg-body":"bg-[url('/bg-body.png')] to-blue-200/[0.2]"},
     {"bg-gallery":"bg-[url('/bg-gallery.png')]"},

@@ -1,0 +1,28 @@
+---
+import { supabase } from "@/supabase";
+import { Image } from "astro:assets";
+const { data:service } = await supabase
+  .from('service').select("*").eq("position", 5).single();
+
+const { data:items } = await supabase
+.from('service').select("*").eq("parent_id", service?.id || "");
+
+---
+<div class="wrapper" section-style>
+   <h5 service-name>{service?.name}</h5>
+   <!-- 1 -->
+  {items?.map(item=>(
+    <div flex-service-item>
+         <Image src={item?.image_url as string} alt="" width={100} height={100} class="rounded-full"/>
+      <div flex-1>
+         <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+            <span class="w-fit">{item.name}</span>
+            <div class="flex-1" h-1 border-b-1/>
+            <span class="w-fit">{item.price}</span>
+         </div>
+         {item.description && <div text-sm set:html={item.description}>
+         </div>}
+      </div>
+   </div>
+  ))}
+</div>

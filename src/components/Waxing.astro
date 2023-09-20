@@ -1,0 +1,21 @@
+---
+import { supabase } from "@/supabase";
+const { data:service } = await supabase
+  .from('service').select("*").eq("position", 8).single();
+
+const { data:items } = await supabase
+.from('service').select("*").eq("parent_id", service?.id || "");
+---
+<div class="wrapper" section-style>
+   <h5 service-name>{service?.name}</h5>
+   <div text-center mb-5 set:html={service?.description}></div>
+   <div grid grid-cols-2 gap-x-5 gap-y-3>
+     {items?.map(item=>(
+       <div flex justify-between items-center gap-x-1 font-semibold text-primary>
+         <span>{item.name}</span>
+         <div flex-1 h-1 border-b-1/>
+         <span>{item.price}</span>
+      </div>
+     ))}
+   </div>
+</div>

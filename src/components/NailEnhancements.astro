@@ -1,0 +1,90 @@
+---
+import { supabase } from "@/supabase";
+import { Image } from "astro:assets";
+const { data:service } = await supabase
+  .from('service').select("*").eq("position", 1).single();
+
+//   Acrylic
+    const { data:acrylic } = await supabase
+   .from('service').select("*").eq("position", 2).single();
+
+      const { data:acrylicItems } = await supabase
+   .from('service').select("*").eq("parent_id", acrylic?.id || "");
+
+//  SNS Dipping
+   const { data:sns } = await supabase
+   .from('service').select("*").eq("position", 3).single();
+
+   const { data:snsItems } = await supabase
+   .from('service').select("*").eq("parent_id", sns?.id || "");
+
+---
+   <div class="wrapper">
+            <h5 class="service-name">{service?.name}</h5>
+         <div class="flex flex-col items-center gap-x-10 md:(flex-row items-start)">
+            <!-- acrylic -->
+            <div  class="md:(flex-shrink-0 w-1/2)">
+               <h3 uppercase text-secondary font-semibold italic my-5 text-center>{acrylic?.name}</h3>
+               <!-- box -->
+               <div w-full border-2 border-black text-sm mb-5>
+                  <!-- thead -->
+                  <div grid grid-cols-4 gap-x-12 font-semibold bg-primary h-12>
+                     <div col-start-3 text-white py-1></div>
+                     <div  text-white py-1></div>
+                  </div>
+                  <!-- 1 -->
+                  <div class="[&>*:nth-child(even)]:bg-gray-300 [&>*:nth-child(odd)]:bg-gray-100">
+                 {acrylicItems?.map(item=> (
+                        <div flex item-centers justify-between p-2 font-semibold>
+                           <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>{item.name}</span></div>
+                           <div text-white py-1 text-start><span text-gray-900>{item.price}</span></div>
+                        </div>
+                        ))}
+                  </div>
+            </div>
+            <Image src="https://fstvegfbsozbqsxwryiu.supabase.co/storage/v1/object/sign/images/Nail%20Enhancements/sns.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvTmFpbCBFbmhhbmNlbWVudHMvc25zLmpwZWciLCJpYXQiOjE2OTUyMjgyNTYsImV4cCI6MjU1OTE0MTg1Nn0.1qOTE9QFcSqwjZTZItdRYCy9amuVzt304kshCfFOZS0&t=2023-09-20T16%3A44%3A16.391Z" width={600} height={200} alt="SNS"/>
+            </div>
+            <!-- sns -->
+            <div class="text-sm font-medium">
+               <h3 class="uppercase text-secondary font-semibold italic my-5 text-center">{sns?.name}</h3>
+               <div class="text-sm" set:html={sns?.description}>
+               </div>
+               <ul class="my-5 flex flex-col gap-y-2">
+                  {snsItems?.map(item=> (
+                     <>
+                     <li class="flex justify-between items-center gap-x-1 font-semibold text-primary">
+                        <span class="w-fit">{item.name}</span>
+                        <div class="flex-1" h-1 border-b-1/>
+                        <span class="w-fit">{item.price}</span>
+                     </li>
+                     {item.description && <p text-sm>{item.description}</p>}
+                     </>
+                  ))}
+                  <!-- 
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">SNS Dip French With Tip
+                     </span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$60/ $70</span>
+                  </li>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">SNS Ombre With Tip</span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$65/ $75</span>
+                  </li>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">Gel X</span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$60+</span>
+                  </li>
+                  <p text-sm>Gel-X nails are flexible, lightweight, and natural-looking, especially when compared to acrylics. NO liquid smell. QUICK to apply. Additionally, they are extremely easy to shape.</p>
+                  <li flex justify-between items-center gap-x-1 font-semibold text-primary>
+                     <span class="w-fit">T.A.P Gel</span>
+                     <div class="flex-1" h-1 border-b-1/>
+                     <span class="w-fit">$60+</span>
+                  </li>
+                  <p text-sm>T.A.P Gel is a complete Nail Enhancement System that builds strength and foundation for anyone looking for more lightweight and natural-looking nails.</p> -->
+               </ul>
+            </div>
+         </div>
+ 
