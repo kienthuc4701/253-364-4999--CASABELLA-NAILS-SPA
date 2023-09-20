@@ -10,7 +10,7 @@ const { data:items } = await supabase
 <div class="wrapper" section-style>
    <h5 service-name>{service?.name}</h5>
    <div text-center mb-5 set:html={service?.description}></div>
-   <div grid grid-cols-2 gap-x-5 gap-y-3>
+   <div grid grid-cols-1  md:(grid-cols-2) gap-x-5 gap-y-3>
      {items?.map(item=>(
        <div flex justify-between items-center gap-x-1 font-semibold text-primary>
          <span>{item.name}</span>

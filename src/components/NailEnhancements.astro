@@ -28,16 +28,14 @@ const { data:service } = await supabase
                <!-- box -->
                <div w-full border-2 border-black text-sm mb-5>
                   <!-- thead -->
-                  <div grid grid-cols-4 gap-x-12 font-semibold bg-primary h-12>
-                     <div col-start-3 text-white py-1></div>
-                     <div  text-white py-1></div>
+                  <div grid grid-cols-4 gap-x-12 font-secondary bg-third h-12>
                   </div>
                   <!-- 1 -->
                   <div class="[&>*:nth-child(even)]:bg-gray-300 [&>*:nth-child(odd)]:bg-gray-100">
                  {acrylicItems?.map(item=> (
                         <div flex item-centers justify-between p-2 font-semibold>
-                           <div col-start-1 col-end-3 text-white py-1 text-start><span text-gray-900>{item.name}</span></div>
-                           <div text-white py-1 text-start><span text-gray-900>{item.price}</span></div>
+                           <div col-start-1 col-end-3 text-white text-start><span text-gray-900>{item.name}</span></div>
+                           <div text-white text-start><span text-gray-900>{item.price}</span></div>
                         </div>
                         ))}
                   </div>
